@@ -1,0 +1,34 @@
+{
+  "name": "job-search",
+  "version": "1.0.0",
+  "main": "index.js",
+  "scripts": {
+    "test": "echo \"Error: no test specified\" && exit 1",
+    "start": "node server/index.js",
+    "build": "cd job-search && npm install && npm run build",
+    "update": "cd job-search && npm run build",
+    "watch": "watch \"npm run build\" ./job-search/src"
+  },
+  "keywords": [],
+  "author": "",
+  "license": "ISC",
+  "description": "",
+  "dependencies": {
+    "@fortawesome/fontawesome-svg-core": "^6.6.0",
+    "@fortawesome/free-solid-svg-icons": "^6.6.0",
+    "@fortawesome/react-fontawesome": "^0.2.2",
+    "body-parser": "^1.20.3",
+    "dotenv": "^16.4.5",
+    "env": "^0.0.2",
+    "express": "^4.21.0",
+    "fd": "^0.0.3",
+    "fs": "^0.0.1-security",
+    "http": "^0.0.1-security",
+    "net": "^1.0.2",
+    "path": "^0.12.7",
+    "request": "^2.88.2",
+    "undici": "^6.19.8",
+    "watch": "^1.0.2"
+  },
+  "debug.javascript.codelens.npmScripts": "never"
+}
