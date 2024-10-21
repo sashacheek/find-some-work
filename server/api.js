@@ -1,10 +1,10 @@
-const { response } = require("express");
+// const { response } = require("express");
 const request = require("undici");
 
 require("dotenv").config();
 const apiKey = process.env.API_KEY;
 
-const getData = async ({ jobTitle, sample_data }) => {
+const getData = async ({ filters }) => {
   // defaults
   const _limit = 20;
   let _page = 0;
@@ -12,11 +12,11 @@ const getData = async ({ jobTitle, sample_data }) => {
   let _sample_data = true;
 
   // set user-inputted values
-  if (jobTitle) {
-    _jobTitle.push(jobTitle);
+  if (filters.jobTitle) {
+    _jobTitle.push(filters.jobTitle);
   }
-  if (sample_data) {
-    _sample_data = sample_data;
+  if (filters.sample_data) {
+    _sample_data = filters.sample_data;
   }
 
   // api call to get job data
